@@ -30,7 +30,7 @@ class Play extends Phaser.Scene {
         // add the rocket
         this.p1Rocket = new Rocket(this, game.config.width/2-8, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
 
-        // add the spaceships
+        // add the speedship and spaceship
         this.ship01 = new Speedship(this, game.config.width+192, 132, 'speedship', 0, 50).setOrigin(0,0);
         this.ship02 = new Spaceship(this, game.config.width+96, 196, 'spaceship', 0, 20).setOrigin(0,0);
         this.ship03 = new Spaceship(this, game.config.width, 260, 'spaceship', 0, 10).setOrigin(0,0);
@@ -46,10 +46,6 @@ class Play extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('explosion', {start: 0, end: 9, first: 0}),
             frameRate: 30
         });
-
-        // score
-        //this.p1Score = 0;
-        //this.p2Score = 0;
 
         // score display
         let scoreConfig = {
@@ -72,6 +68,10 @@ class Play extends Phaser.Scene {
 
         // game over flag
         this.gameOver = false;
+
+        var music = this.sound.add('music');
+        music.setLoop(true);
+        music.play();
 
         // play clock
         scoreConfig.fixedWidth = 0;

@@ -7,10 +7,10 @@ class Speedship extends Phaser.GameObjects.Sprite {
     }
 
     update() {
-        // move spaceship to the left
+        // move speedship to the left
         this.x -= game.settings.spaceshipSpeed+2;
 
-        //wraparound the spaceship from left to right
+        //wraparound the speedship from left to right
         if(this.x <= 0-this.width) {
             this.x = game.config.width;
         }
