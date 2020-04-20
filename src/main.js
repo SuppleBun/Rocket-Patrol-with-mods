@@ -1,3 +1,13 @@
+/*
+    name: Joonsu Jun
+    Implemented:
+    1. high score tracker (10 pts)
+    2. cool background music in play scene (10 pts)
+    3. allows the rocket to be controlled after it's fired (10 pts)
+    4. better/prettier scrolling tile sprite for background (10 pts)
+    5. new spaceship type that moves faster and is worth more points (25 pts)
+    6. alternating 2 player mode (25 pts)
+*/
 let config = {
     type: Phaser.CANVAS,
     width: 640,
