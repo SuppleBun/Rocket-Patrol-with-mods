@@ -70,6 +70,7 @@ class Play extends Phaser.Scene {
         this.gameOver = false;
 
         // cool background music
+        // got help from this website https://rexrainbow.github.io/phaser3-rex-notes/docs/site/audio/
         var music = this.sound.add('music');
         music.setLoop(true);
         music.play();
