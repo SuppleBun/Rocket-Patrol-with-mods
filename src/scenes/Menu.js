@@ -42,8 +42,6 @@ class Menu extends Phaser.Scene {
         menuConfig.color = '#000';
         this.add.text(centerX, centerY + textSpacer, 'Press <- for EZ or -> for Hard', menuConfig).setOrigin(0.5);
 
-        //this.scene.start("playScene");
-
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);

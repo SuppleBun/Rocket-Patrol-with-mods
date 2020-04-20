@@ -69,6 +69,7 @@ class Play extends Phaser.Scene {
         // game over flag
         this.gameOver = false;
 
+        // cool background music
         var music = this.sound.add('music');
         music.setLoop(true);
         music.play();
@@ -85,10 +86,13 @@ class Play extends Phaser.Scene {
                 highScore = p2Score;
                 this.add.text(320, 54, "HIGH SCORE:"+highScore,scoreConfig);
             }
+
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
             this.add.text(game.config.width/2, game.config.height/2 + 64, '(F)ire to for next player turn', scoreConfig).setOrigin(0.5);
             this.add.text(game.config.width/2, game.config.height/2 + (64*2), '<- for Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
+
+            // determines who's turn is next
             if(player1Play) {
                 player1Play = false;
             } else {
